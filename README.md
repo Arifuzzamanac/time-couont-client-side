@@ -1,5 +1,13 @@
 # Getting Started with Create React App
 
+wellcome to my time count site : https://time-count-eb5a0.web.app/
+
+.. this site is createe by react 
+.. mui use for style 
+.. add product from server live 
+.. deploy firebse 
+.. live server deploy on heroku
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
