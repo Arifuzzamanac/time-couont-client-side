@@ -15,14 +15,8 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useRouteMatch
-} from "react-router-dom";
-import {Button} from '@mui/material';
+import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
+import { Button } from '@mui/material';
 import DashboardHome from '../DashboardHome/DashboardHome';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AddProduct from '../AddProduct/AddProduct';
@@ -33,47 +27,47 @@ import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 const drawerWidth = 240;
 
 function Dashboard(props) {
-    const {window} = props;
+    const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    let {path, url} = useRouteMatch();
-    const {admin} = useAuth();
+    let { path, url } = useRouteMatch();
+    const { admin } = useAuth();
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
 
     const drawer = (
         <div>
-            <Toolbar/>
-            <Divider/>
+            <Toolbar />
+            <Divider />
             <Box>
-            <Link to="/">
-                <Button color="inherit">Home</Button>
-            </Link>
+                <Link to="/">
+                    <Button color="inherit">Home</Button>
+                </Link>
             </Box>
             <Box>
-            <Link to={`${url}`}>
-                <Button color="inherit">Dashboard</Button>
-            </Link>
+                <Link to={`${url}`}>
+                    <Button color="inherit">Dashboard</Button>
+                </Link>
             </Box>
             {
                 admin && <Box>
-                        <Box>
+                    <Box>
                         <Link to={`${url}/makeAdmin`}>
                             <Button color="inherit">Make Admin</Button>
                         </Link>
-                        </Box>
-                        <Box>
+                    </Box>
+                    <Box>
                         <Link to={`${url}/addProduct`}>
                             <Button color="inherit">Add Product</Button>
                         </Link>
-                        </Box>
-                        <Box>
+                    </Box>
+                    <Box>
                         <Link to={`${url}/manageProducts`}>
                             <Button color="inherit">Manage Products</Button>
                         </Link>
-                        </Box>
-                        
                     </Box>
+
+                </Box>
             }
             <List>
                 {
@@ -82,11 +76,11 @@ function Dashboard(props) {
                             <ListItemIcon>
                                 {
                                     index % 2 === 0
-                                        ? <InboxIcon/>
-                                        : <MailIcon/>
+                                        ? <InboxIcon />
+                                        : <MailIcon />
                                 }
                             </ListItemIcon>
-                            <ListItemText primary={text}/>
+                            <ListItemText primary={text} />
                         </ListItem>
                     ))
                 }
@@ -100,9 +94,9 @@ function Dashboard(props) {
 
     return (
         <Box sx={{
-                display: 'flex'
-            }}>
-            <CssBaseline/>
+            display: 'flex'
+        }}>
+            <CssBaseline />
             <AppBar
                 position="fixed"
                 sx={{
@@ -125,7 +119,7 @@ function Dashboard(props) {
                                 sm: 'none'
                             }
                         }}>
-                        <MenuIcon/>
+                        <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap="noWrap" component="div">
                         Dashboard
@@ -157,7 +151,7 @@ function Dashboard(props) {
                             xs: 'block',
                             sm: 'none'
                         },
-                        '& .MuiDrawer-paper' : {
+                        '& .MuiDrawer-paper': {
                             boxSizing: 'border-box',
                             width: drawerWidth
                         }
@@ -171,7 +165,7 @@ function Dashboard(props) {
                             xs: 'none',
                             sm: 'block'
                         },
-                        '& .MuiDrawer-paper' : {
+                        '& .MuiDrawer-paper': {
                             boxSizing: 'border-box',
                             width: drawerWidth
                         }
@@ -189,7 +183,7 @@ function Dashboard(props) {
                         sm: `calc(100% - ${drawerWidth}px)`
                     }
                 }}>
-                <Toolbar/>
+                <Toolbar />
                 <Switch>
                     <Route exact="exact" path={path}>
                         <DashboardHome></DashboardHome>
