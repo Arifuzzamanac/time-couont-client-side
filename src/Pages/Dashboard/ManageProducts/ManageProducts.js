@@ -1,16 +1,6 @@
-import {
-    Button,
-    Card,
-    CardActions,
-    CardContent,
-    CardMedia,
-    Container,
-    Grid,
-    Link,
-    Typography
-} from '@mui/material';
-import {Box} from '@mui/system';
-import React, {useEffect, useState} from 'react';
+import { Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material';
+import { Box } from '@mui/system';
+import React, { useEffect, useState } from 'react';
 
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
@@ -23,7 +13,7 @@ const ManageProducts = () => {
 
     const handleDelete = id => {
         const url = `http://localhost:5000/products/${id}`;
-        fetch(url, {method: 'DELETE'})
+        fetch(url, { method: 'DELETE' })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -65,7 +55,7 @@ const ManageProducts = () => {
                                             objectFit: 'contain'
                                         }}
                                         image={product.img}
-                                        alt="green iguana"/>
+                                        alt="green iguana" />
                                     <CardContent>
                                         <Typography
                                             sx={{

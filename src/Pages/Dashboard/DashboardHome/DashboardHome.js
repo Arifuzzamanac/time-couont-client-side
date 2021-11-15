@@ -12,7 +12,7 @@ const DashboardHome = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setOrderProducts(data));
-    }, [])
+    }, [user.email])
 
 
     const handleDelete = id => {
