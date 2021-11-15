@@ -14,7 +14,7 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 400,
-  bgcolor: '#9f7a49',
+  bgcolor: '#0b142c',
   border: '2px solid rgba(193,164,130,.3)',
   boxShadow: 24,
   p: 4,
@@ -42,7 +42,7 @@ const OrderModal = ({openOrder, handleOrderClose, product}) => {
       productName: name
     }
     // Send To The Server
-    fetch('http://localhost:5000/orderProducts', {
+    fetch('https://stark-castle-00889.herokuapp.com/orderProducts', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -73,12 +73,12 @@ const OrderModal = ({openOrder, handleOrderClose, product}) => {
       >
         <Fade in={openOrder}>
           <Box sx={style}>
-            <Typography id="transition-modal-title" variant="h6" component="h2">
+            <Typography sx={{color: 'white'}} id="transition-modal-title" variant="h6" component="h2">
               {name}
             </Typography>
             <form onSubmit={handleOrderSumit}>
             <TextField
-            sx={{width: '90%', m: 1}}
+            sx={{width: '90%', m: 1, backgroundColor: 'white'}}
           id="outlined-size-small"
           name= "buyerName"
           onBlur={handleOnBlur}
@@ -87,7 +87,7 @@ const OrderModal = ({openOrder, handleOrderClose, product}) => {
           size="small"
         />
             <TextField
-            sx={{width: '90%', m: 1}}
+            sx={{width: '90%', m: 1, backgroundColor: 'white'}}
           id="outlined-size-small"
           name= "email"
           onBlur={handleOnBlur}
@@ -96,7 +96,7 @@ const OrderModal = ({openOrder, handleOrderClose, product}) => {
           size="small"
         />
             <TextField
-            sx={{width: '90%', m: 1}}
+            sx={{width: '90%', m: 1, backgroundColor: 'white'}}
           id="outlined-size-small"
           name= "phone"
           onBlur={handleOnBlur}
@@ -105,7 +105,7 @@ const OrderModal = ({openOrder, handleOrderClose, product}) => {
         />
             <TextField
             disabled
-            sx={{width: '90%', m: 1}}
+            sx={{width: '90%', m: 1, backgroundColor: 'white'}}
           id="outlined-size-small"
           placeholder="Product Price"
           defaultValue={price}

@@ -10,7 +10,7 @@ const ProductDetails = () => {
     const [product, setProduct] = useState({});
     const { img, name, discription, price } = product;
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${ProductId}`)
+        fetch(`https://stark-castle-00889.herokuapp.com/products/${ProductId}`)
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [ProductId]);
@@ -29,8 +29,8 @@ const ProductDetails = () => {
                             width: 3 / 4,
                             mt: 8
                         }}>
-                        <Grid container="container" spacing={4}>
-                            <Grid item="item" xs={12} md={6} xl={6} height="580px" backgroundColor="rgba(193,164,130,.3)">
+                        <Grid container="container" spacing={2}>
+                            <Grid item="item" xs={12} md={6} xl={6} height="580px" backgroundColor='#0b142c' padding="5">
                                 <img
                                     style={{
                                         width: "100%",

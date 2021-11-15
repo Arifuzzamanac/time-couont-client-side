@@ -8,7 +8,7 @@ const DashboardHome = () => {
     const [orderProducts, setOrderProducts] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/orderProducts?email=${user.email}`;
+        const url = `https://stark-castle-00889.herokuapp.com/orderProducts?email=${user.email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setOrderProducts(data));
@@ -16,7 +16,7 @@ const DashboardHome = () => {
 
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/orderProducts/${id}`;
+        const url = `https://stark-castle-00889.herokuapp.com/orderProducts/${id}`;
         fetch(url, { method: 'DELETE' })
             .then(res => res.json())
             .then(data => {
