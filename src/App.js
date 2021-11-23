@@ -8,6 +8,7 @@ import AuthProvaider from './contexts/AuthProvider/AuthProvaider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import ProductDetails from './Pages/ProductDetails/ProductDetails';
+import CustomerReviews from '../src/Pages/CustomerReviews/CustomerReviews';
 // import UpdateProduct from './Pages/Dashboard/UpdateProduct/UpdateProduct';
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
             </Route>
             <Route path="/register">
               <Register />
+            </Route>
+            <Route path="/customerreviews">
+              <CustomerReviews />
             </Route>
             <Route path="/productDetails/:ProductId">
               <ProductDetails />

@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useForm } from 'react-hook-form';
 import { Container } from '@mui/material';
 import { Box } from '@mui/system';
+import './Review.css';
 
 const Review = () => {
 
@@ -25,7 +26,7 @@ const Review = () => {
           <div>
             <h2 style={{ fontSize: "35px" }}>Reviews as Client</h2>
             <iframe width="100%" height="300px"
-              src="http://localhost:3000/clientReview"
+              src="http://localhost:3000/customerreviews"
               title="Our Client Review"></iframe>
           </div>
           <div className="reviewForm" style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
