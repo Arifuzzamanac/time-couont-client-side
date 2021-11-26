@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
 import { Container } from '@mui/material';
 import CustomerReview from '../CurstomerReview/CustomerReview'
 
